@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>user Table</title>
+</head>
+<style>
+table, th, td {
+    border: 1px solid rgb(75, 40, 157);
+    border-collapse: collapse;
+    padding: 6px;
+}
+</style>
+<body>
+    <h1>List of users</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Age</th>
+                <th>City</th>
+                <th>Profession</th>   
+            </tr>
+        </thead>
+        <tbody>
+            <% for(const u of user){%>
+                <tr>
+                    <td><%= u.name %></td>
+                    <td><%= u.email %></td>
+                    <td><%= u.age %></td>
+                    <td><%= u.city %></td>
+                    <td><%= u.profession %></td>
+                </tr>
+                <% } %>
+        </tbody>
+    </table>
+    <br>
+    <a href="/user/add">add user</a>
+</body>
+</html>
